@@ -1,7 +1,22 @@
 # NYC 311 Requests - ETL Pipeline and Analysis
 
+# Table of Contents
+
+1. [Objective](#objective)  
+2. [Stakeholder Impact](#stakeholder-impact)  
+3. [Dataset Description](#dataset-description)  
+4. [Data Pipeline Design](#pipeline-design)  
+5. [Technologies and Techniques Used](#technologies-and-techniques-used)  
+    - [Technologies Used](#technologies-used)  
+    - [Techniques Employed](#techniques-employed)  
+6. [Challenges](#challenges)  
+7. [Outputs and Key Findings](#outputs-and-key-findings)  
+    - [Breakdown of Complaints by Location](#breakdown-of-complaints-by-location)  
+    - [Trends Over Time and Agency Responses](#trends-over-time-and-agency-responses)  
+8. [Recommendations](#recommendations)
+
 ## Objective
-This project analyzes NYC 311 data consisting of 38 million records to uncover actionable insights into complaint trends, agency performance, and service efficiency. The goal is to support data-driven decision-making and improve resource allocation, ultimately enhancing public satisfaction.
+This project analyzes [NYC 311 data](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/about_data) consisting of 38 million records to uncover actionable insights into complaint trends, agency performance, and service efficiency. The goal is to support data-driven decision-making and improve resource allocation, ultimately enhancing public satisfaction.
 
 The analysis focuses on:
 - **Complaint Trends:** Identifying hotspots and peak times to enable proactive planning.
@@ -9,7 +24,7 @@ The analysis focuses on:
 - **Time Efficiency:** Analyzing resolution times to streamline processes.
 - **Location Prioritization:** Pinpointing high-priority areas for better resource allocation.
 
----
+
 
 ## Stakeholder Impact
 - **Operational Efficiency:** Provides NYC 311 with recommendations to improve resource allocation and complaint handling.
@@ -23,16 +38,16 @@ The dataset consists of over **38 million records** of 311 Service Requests made
 
 ### Key Characteristics:
 - **Update Frequency:** Automatically updated daily to include new requests.
-- **Format:** API (JSON/CSV) with 41 nested columns.
+- **Format:** API endpoint(JSON), CSV, Query, OData(Tableau or Excel) with 41 nested columns.
 - **Focus:** The analysis uses data from 2021 to the present for trends and insights.
 
-*A detailed ERD of the final transformed data is provided below for better understanding of relationships among 311 requests.*
+*A detailed ERD of the final transformed data is provided below for better understanding of relationships among 311 requests.* 
 ![ERD](link-to-erd-image)
 
 ---
 
-## Data Pipeline Design
-![Pipeline Design](link-to-pipeline-image)
+## Pipeline Design
+![Pipeline Design](https://github.com/kathisnehith/NYC311-requests-pipeline-Analysis/blob/main/img/NYC311_pipeline%20design.png)
 
 The data pipeline integrates NYC 311 data and processes it through the following steps:
 - Data is extracted from the NYC311 API by Apache Spark on GCP DataProc and stored in GCP Storage Buckets for processing.

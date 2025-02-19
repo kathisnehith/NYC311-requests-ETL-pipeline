@@ -42,7 +42,7 @@ The dataset consists of over **38 million records** of 311 Service Requests made
 - **Focus:** The analysis uses data from 2021 to the present for trends and insights.
 
 *A detailed ERD of the final transformed data is provided below for better understanding of relationships among 311 requests.* 
-![ERD](link-to-erd-image)
+![ERD](https://github.com/kathisnehith/NYC311-requests-ETL-pipeline/blob/main/img/transformed_data_ERD.png)
 
 ---
 
